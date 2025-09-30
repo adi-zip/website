@@ -3,70 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>adi.zip studio</title>
+  <title>adi.zip Studio</title>
+  
+  <!-- Load Hangout font -->
+  <link href="https://fonts.cdnfonts.com/css/hangout" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-family: 'Hangout', sans-serif;
       background: #fdf6f2;
-      overflow: hidden;
-    }
-
-    .loader {
+      color: #2d0c15;
       display: flex;
       flex-direction: column;
       align-items: center;
-      animation: fadeIn 1s ease-in-out;
+      text-align: center;
     }
 
-    .logo {
-      width: 320px;
-      height: auto;
-      animation: pulse 2s infinite ease-in-out;
+    header {
+      padding: 80px 20px 40px;
     }
 
-    .loading-text {
-      margin-top: 20px;
-      font-family: sans-serif;
-      font-size: 20px;
+    header h1 {
+      font-size: 64px;
+      margin: 0;
       color: #772c38;
-      animation: blink 1.2s infinite;
     }
 
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    header p {
+      font-size: 22px;
+      margin: 10px 0 0;
+      color: #444;
     }
 
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.4; }
+    section {
+      max-width: 800px;
+      padding: 40px 20px;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #772c38;
+    }
+
+    .projects {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .card {
+      background: #fff2f2;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    footer {
+      padding: 30px;
+      font-size: 16px;
+      color: #666;
+    }
+
+    a {
+      color: #772c38;
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="loader">
-    <!-- Inline vectorized SVG -->
-    <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-      <!-- Paths generated from your logo -->
-      <path d="M 444,499 Z" fill="#772c38" stroke="#2d0c15" stroke-width="10"/>
-      <path d="M 442,499 Z" fill="#772c38" stroke="#2d0c15" stroke-width="10"/>
-      <path d="M 438,499 Z" fill="#772c38" stroke="#2d0c15" stroke-width="10"/>
-      <path d="M 435,499 Z" fill="#772c38" stroke="#2d0c15" stroke-width="10"/>
-      <path d="M 431,499 Z" fill="#772c38" stroke="#2d0c15" stroke-width="10"/>
-      <!-- ...many more paths continue here from the SVG... -->
-    </svg>
+  <header>
+    <h1>adi.zip</h1>
+    <p>Building websites, bots, and BotForge extensions</p>
+  </header>
 
-    <div class="loading-text">Loading...</div>
-  </div>
+  <section>
+    <h2>About</h2>
+    <p>
+      adi.zip is a small creative studio that loves crafting fast websites,
+      Discord bots, and extensions for BotForge. We focus on clean design,
+      modern tech, and tools that are simple to use.
+    </p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Website Builds</h3>
+        <p>Modern, responsive websites with React, Next.js, Tailwind, Chakra, and more.</p>
+      </div>
+      <div class="card">
+        <h3>Discord Bots</h3>
+        <p>AI chatbots, and custom utilities built on discord.js & ForgeScript.</p>
+      </div>
+      <div class="card">
+        <h3>BotForge Extensions</h3>
+        <p>Custom ForgeScript extensions to extend your bots with unique features.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      💌 <a href="mailto:hello@adi.zip">not avaliable rn</a><br>
+      💬 Discord: <strong>imreallyadi</strong>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 adi.zip — All rights reserved
+  </footer>
 </body>
 </html>
